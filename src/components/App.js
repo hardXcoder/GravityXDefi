@@ -86,6 +86,10 @@ class App extends Component {
         this.setState({ inrcContract });
         this.setState({ commissionFeeAccountContract });
 
+        console.log(usdcContract);
+        console.log(inrcContract);
+        console.log(commissionFeeAccountContract);
+
         var usdcInWallet = this.toEthUnit(
           await usdcContract.methods.balanceOf(this.state.account).call()
         );
